@@ -11,52 +11,54 @@ import { NgOptimizedImage } from '@angular/common';
 export class Home {
     readonly cards = [
         {
-            imageSrc: '/images/card-placeholder.svg',
-            imageAlt: 'Abstract gradient with geometric shapes',
+            imageSrc: '/images/card-backend.svg',
+            imageAlt: 'Backend systems dashboard with signal line',
             imageWidth: 600,
             imageHeight: 360,
             title: 'Backend Development',
             description: 'Creating robust and scalable server-side applications that power modern web experiences.',
         },
         {
-            imageSrc: '/images/card-placeholder.svg',
-            imageAlt: 'Abstract gradient with geometric shapes',
+            imageSrc: '/images/card-system.svg',
+            imageAlt: 'Modular system blocks connected by lines',
             imageWidth: 600,
             imageHeight: 360,
             title: 'System Development',
             description: 'Building efficient and reliable software solutions tailored to meet complex business needs.',
         },
         {
-            imageSrc: '/images/card-placeholder.svg',
-            imageAlt: 'Abstract gradient with geometric shapes',
+            imageSrc: '/images/card-frontend.svg',
+            imageAlt: 'Frontend interface with code editor and design tools',
             imageWidth: 600,
             imageHeight: 360,
             title: 'Frontend Development',
             description: 'Crafting visually appealing and responsive interfaces that engage users effectively.',
         },
         {
-            imageSrc: '/images/card-placeholder.svg',
-            imageAlt: 'Abstract gradient with geometric shapes',
+            imageSrc: '/images/card-hardware.svg',
+            imageAlt: 'Hardware chip with pins and circuitry',
             imageWidth: 600,
             imageHeight: 360,
             title: 'Hardware Passion',
-            description: 'Exploring components, tuning performance, and building reliable rigs for real-world workloads.',
+            description:
+                'Exploring components, tuning performance, and building reliable rigs for real-world workloads.',
         },
         {
-            imageSrc: '/images/card-placeholder.svg',
-            imageAlt: 'Abstract gradient with geometric shapes',
+            imageSrc: '/images/card-linux.svg',
+            imageAlt: 'Linux terminal with command line interface and system monitoring tools',
             imageWidth: 600,
             imageHeight: 360,
             title: 'Linux Server',
             description: 'Deploying secure, automated Linux services with clean monitoring and maintenance practices.',
         },
         {
-            imageSrc: '/images/card-placeholder.svg',
-            imageAlt: 'Abstract gradient with geometric shapes',
+            imageSrc: '/images/card-windows.svg',
+            imageAlt: 'Windows server with Internet Information Services and system management tools',
             imageWidth: 600,
             imageHeight: 360,
             title: 'Windows Server',
-            description: 'Managing Windows infrastructure, Internet Information Services, and services to support business needs.',
+            description:
+                'Managing Windows infrastructure, Internet Information Services, and services to support business needs.',
         },
     ];
 

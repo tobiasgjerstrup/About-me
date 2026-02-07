@@ -1,0 +1,24 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B0F14" />
+      <stop offset="1" stop-color="#1F2937" />
+    </linearGradient>
+    <linearGradient id="rack" x1="260" y1="200" x2="940" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#10B981" />
+      <stop offset="1" stop-color="#22D3EE" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)" />
+  <rect x="240" y="150" width="720" height="420" rx="24" fill="#0F172A" opacity="0.85" />
+  <rect x="300" y="210" width="600" height="70" rx="14" fill="#111827" />
+  <rect x="300" y="310" width="600" height="70" rx="14" fill="#111827" />
+  <rect x="300" y="410" width="600" height="70" rx="14" fill="#111827" />
+  <circle cx="360" cy="245" r="12" fill="url(#rack)" />
+  <circle cx="360" cy="345" r="12" fill="url(#rack)" />
+  <circle cx="360" cy="445" r="12" fill="url(#rack)" />
+  <path d="M420 245 H 760" stroke="#22C55E" stroke-width="10" stroke-linecap="round" />
+  <path d="M420 345 H 720" stroke="#22C55E" stroke-width="10" stroke-linecap="round" />
+  <path d="M420 445 H 680" stroke="#22C55E" stroke-width="10" stroke-linecap="round" />
+  <circle cx="980" cy="520" r="90" fill="#10B981" opacity="0.25" />
+</svg>

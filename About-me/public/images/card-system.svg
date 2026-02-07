@@ -1,0 +1,23 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#10151E" />
+      <stop offset="1" stop-color="#2A1F2D" />
+    </linearGradient>
+    <linearGradient id="grid" x1="240" y1="120" x2="960" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F59E0B" />
+      <stop offset="1" stop-color="#EF4444" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)" />
+  <rect x="140" y="120" width="920" height="480" rx="30" fill="#151A24" opacity="0.85" />
+  <rect x="200" y="180" width="280" height="160" rx="18" fill="#1F2937" />
+  <rect x="520" y="180" width="280" height="160" rx="18" fill="#1F2937" />
+  <rect x="200" y="380" width="280" height="160" rx="18" fill="#1F2937" />
+  <rect x="520" y="380" width="280" height="160" rx="18" fill="#1F2937" />
+  <path d="M340 260 H 520" stroke="url(#grid)" stroke-width="10" stroke-linecap="round" />
+  <path d="M660 260 H 840" stroke="url(#grid)" stroke-width="10" stroke-linecap="round" />
+  <path d="M340 460 H 520" stroke="url(#grid)" stroke-width="10" stroke-linecap="round" />
+  <path d="M660 460 H 840" stroke="url(#grid)" stroke-width="10" stroke-linecap="round" />
+  <circle cx="940" cy="520" r="80" fill="#F97316" opacity="0.45" />
+</svg>

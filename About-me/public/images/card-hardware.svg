@@ -1,0 +1,30 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#141414" />
+      <stop offset="1" stop-color="#2A2A2A" />
+    </linearGradient>
+    <linearGradient id="chip" x1="280" y1="220" x2="920" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE" />
+      <stop offset="1" stop-color="#F97316" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)" />
+  <rect x="260" y="190" width="680" height="340" rx="28" fill="#1B1B1B" />
+  <rect x="320" y="240" width="560" height="240" rx="22" fill="url(#chip)" opacity="0.75" />
+  <g stroke="#4B5563" stroke-width="10" stroke-linecap="round">
+    <path d="M300 180 V 130" />
+    <path d="M420 180 V 130" />
+    <path d="M540 180 V 130" />
+    <path d="M660 180 V 130" />
+    <path d="M780 180 V 130" />
+    <path d="M900 180 V 130" />
+    <path d="M300 540 V 590" />
+    <path d="M420 540 V 590" />
+    <path d="M540 540 V 590" />
+    <path d="M660 540 V 590" />
+    <path d="M780 540 V 590" />
+    <path d="M900 540 V 590" />
+  </g>
+  <circle cx="980" cy="520" r="90" fill="#F59E0B" opacity="0.25" />
+</svg>
