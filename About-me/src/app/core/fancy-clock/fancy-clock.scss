@@ -1,0 +1,107 @@
+:host {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    display: block;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.clock-sky {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(88, 198, 255, 0.16), transparent 45%),
+        radial-gradient(circle at 80% 25%, rgba(255, 178, 95, 0.14), transparent 40%),
+        radial-gradient(circle at 50% 80%, rgba(90, 132, 255, 0.18), transparent 55%),
+        linear-gradient(135deg, #0b0f17, #121a2a 55%, #151f33);
+}
+
+.clock-grid {
+    position: absolute;
+    inset: -20% -10%;
+    opacity: 0.35;
+    --grid-line: clamp(1px, 0.12vmin, 2px);
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) var(--grid-line), transparent var(--grid-line)),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) var(--grid-line), transparent var(--grid-line));
+    background-size: 12vmin 12vmin;
+    transform: rotate(-8deg);
+    filter: blur(0.2px);
+}
+
+.clock {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    --clock-size: 80vh;
+}
+
+.clock-orbit {
+    position: absolute;
+    width: var(--clock-size);
+    height: var(--clock-size);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 clamp(48px, 7vmin, 96px) rgba(86, 159, 255, 0.15);
+}
+
+.clock-face {
+    position: relative;
+    width: calc(var(--clock-size) * 0.84);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.06), transparent 60%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+        0 0 clamp(36px, 5.5vmin, 72px) rgba(56, 189, 248, 0.16),
+        inset 0 0 clamp(24px, 4vmin, 54px) rgba(0, 0, 0, 0.35);
+}
+
+.clock-ticks {
+    position: absolute;
+    inset: 7%;
+    border-radius: 50%;
+    background: repeating-conic-gradient(from -90deg, rgba(255, 255, 255, 0.55) 0deg 2deg, transparent 2deg 30deg);
+    mask: radial-gradient(circle at center, transparent 0 62%, #000 62% 100%);
+    opacity: 0.8;
+}
+
+.clock-hand {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform-origin: 0% 50%;
+    border-radius: 999px;
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.25);
+}
+
+.clock-hand.hour {
+    width: 28%;
+    height: 8px;
+    background: linear-gradient(90deg, #93c5fd, #60a5fa);
+}
+
+.clock-hand.minute {
+    width: 40%;
+    height: 6px;
+    background: linear-gradient(90deg, #a5b4fc, #818cf8);
+}
+
+.clock-hand.second {
+    width: 46%;
+    height: 3px;
+    background: linear-gradient(90deg, #fca5a5, #f97316);
+    box-shadow: 0 0 16px rgba(248, 113, 113, 0.45);
+}
+
+.clock-center {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    box-shadow: 0 0 18px rgba(226, 232, 240, 0.45);
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+}
