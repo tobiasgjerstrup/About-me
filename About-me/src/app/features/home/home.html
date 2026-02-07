@@ -1,0 +1,5 @@
+<div id="cards">
+    @for (card of cards; track $index) {
+        <div class="card" (mousemove)="onCardMove($event)"></div>
+    }
+</div>
