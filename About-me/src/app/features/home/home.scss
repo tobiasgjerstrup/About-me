@@ -6,9 +6,12 @@
     width: calc(100% - 20px);
 }
 
+#cards:hover > .card > .card-border {
+    opacity: 1;
+}
+
 .card {
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); // card default border color
     height: 260px;
     width: 300px;
     cursor: pointer;
@@ -22,8 +25,8 @@
     opacity: 1;
 }
 
-.card::before {
-    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%);
+.card::before,
+.card > .card-border {
     border-radius: inherit;
     content: '';
     height: 100%;
@@ -34,4 +37,34 @@
     z-index: 2;
     opacity: 0;
     transition: 500ms;
+}
+
+.card::before {
+    // card color on hover:
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    z-index: 3;
+}
+
+.card > .card-border {
+    // card border color on hover:
+    background: radial-gradient(
+        400px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.2),
+        transparent 40%
+    );
+    z-index: 1;
+}
+
+.card > .card-content {
+    background-color: var(--card-color); // card default color
+    border-radius: inherit;
+    margin: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    position: relative;
+    z-index: 2;
 }

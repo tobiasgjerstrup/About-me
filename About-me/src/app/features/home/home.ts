@@ -11,17 +11,16 @@ export class Home {
     readonly cards = Array.from({ length: 6 });
 
     onCardMove(event: MouseEvent): void {
-        const card = event.currentTarget as HTMLElement | null;
+        const cards = document.querySelectorAll('.card');
 
-        if (!card) {
-            return;
-        }
+        cards.forEach((card) => {
+            const htmlCard = card as HTMLElement;
+            const rect = htmlCard.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
 
-        const rect = card.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-
-        this.setCardMousePosition(card, x, y);
+            this.setCardMousePosition(htmlCard, x, y);
+        });
     }
 
     private setCardMousePosition(card: HTMLElement, x: number, y: number): void {
