@@ -2,9 +2,13 @@
     @for (card of cards; track $index) {
         <div class="card" (mousemove)="onCardMove($event)">
             <div class="card-content">
+                <img class="card-image" [ngSrc]="card.imageSrc" [width]="card.imageWidth" [height]="card.imageHeight" [attr.alt]="card.imageAlt" />
+                <div class="card-body">
+                    <h3 class="card-title">{{ card.title }}</h3>
+                    <p class="card-description">{{ card.description }}</p>
+                </div>
             </div>
-            <div class="card-border">
-            </div>
+            <div class="card-border"></div>
         </div>
     }
 </div>
