@@ -1,0 +1,39 @@
+$clock-size: 1rem;
+
+.clock-grids {
+    display: flex;
+    gap: 0px;
+}
+
+.clock-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 0px;
+    align-items: start;
+}
+
+.extra-space {
+    margin-right: $clock-size;
+}
+
+ .clock {
+    height: $clock-size;
+    width: $clock-size;
+    background-color: oklch(20% 0 0);
+    border: 0.25rem solid oklch(30% 0 0);   
+    position: relative;
+    overflow: hidden;
+}
+
+.hand {
+    height: 0.1875rem;
+    background-color: oklch(0.9475 0.1916 119.15);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: 0% -50%;
+    width: 50%;
+    transform-origin: left center;
+    transition: rotate 250ms;
+}
