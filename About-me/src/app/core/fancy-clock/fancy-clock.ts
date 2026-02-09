@@ -9,6 +9,7 @@ import {
     signal,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { environment } from '../../../environments/environment';
 
 @Component({
     selector: 'app-fancy-clock',
@@ -19,7 +20,7 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class FancyClock implements OnInit, OnDestroy {
     private readonly platformId = inject(PLATFORM_ID);
-    private readonly now = signal(new Date());
+    private readonly now = signal(environment.customDate ?? new Date());
     private timerId: number | null = null;
 
     readonly hourTransform = computed(() => {
@@ -48,7 +49,7 @@ export class FancyClock implements OnInit, OnDestroy {
             return;
         }
 
-        this.timerId = window.setInterval(() => this.now.set(new Date()), 1000);
+        this.timerId = window.setInterval(() => this.now.set(environment.customDate ?? new Date()), 1000);
     }
 
     ngOnDestroy(): void {
