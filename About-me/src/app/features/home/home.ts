@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
+import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
 
 @Component({
     selector: 'app-home',
-    imports: [NgOptimizedImage],
+    imports: [NgOptimizedImage, RouterOutlet, RouterLinkWithHref],
     templateUrl: './home.html',
     styleUrl: './home.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -17,6 +18,8 @@ export class Home {
             imageHeight: 360,
             title: 'Backend Development',
             description: 'Creating robust and scalable server-side applications that power modern web experiences.',
+            route: 'backend-development',
+            theme: 'green',
         },
         {
             imageSrc: '/images/card-system.svg',
@@ -25,6 +28,8 @@ export class Home {
             imageHeight: 360,
             title: 'System Development',
             description: 'Building efficient and reliable software solutions tailored to meet complex business needs.',
+            route: 'system-development',
+            theme: 'orange',
         },
         {
             imageSrc: '/images/card-frontend.svg',
@@ -33,6 +38,8 @@ export class Home {
             imageHeight: 360,
             title: 'Frontend Development',
             description: 'Crafting visually appealing and responsive interfaces that engage users effectively.',
+            route: 'frontend-development',
+            theme: 'blue',
         },
         {
             imageSrc: '/images/card-hardware.svg',
@@ -42,6 +49,8 @@ export class Home {
             title: 'Hardware Passion',
             description:
                 'Exploring components, tuning performance, and building reliable rigs for real-world workloads.',
+            route: 'hardware-passion',
+            theme: 'orange',
         },
         {
             imageSrc: '/images/card-linux.svg',
@@ -50,6 +59,8 @@ export class Home {
             imageHeight: 360,
             title: 'Linux Server',
             description: 'Deploying secure, automated Linux services with clean monitoring and maintenance practices.',
+            route: 'linux-server',
+            theme: 'green',
         },
         {
             imageSrc: '/images/card-windows.svg',
@@ -59,6 +70,8 @@ export class Home {
             title: 'Windows Server',
             description:
                 'Managing Windows infrastructure, Internet Information Services, and services to support business needs.',
+            route: 'windows-server',
+            theme: 'blue',
         },
     ];
 
@@ -78,5 +91,12 @@ export class Home {
     private setCardMousePosition(card: HTMLElement, x: number, y: number): void {
         card.style.setProperty('--mouse-x', `${x}px`);
         card.style.setProperty('--mouse-y', `${y}px`);
+    }
+
+    public onKeydown($event: KeyboardEvent) {
+        if ($event.key === 'Enter' || $event.key === ' ') {
+            const target = $event.target as HTMLElement;
+            target.click();
+        }
     }
 }

@@ -19,6 +19,7 @@ $card-transition: 500ms;
 }
 
 .card {
+    user-select: none;
     background-color: rgba(255, 255, 255, 0.1);
     height: $card-height;
     width: $card-width;
@@ -102,5 +103,25 @@ $card-transition: 500ms;
         font-size: 0.95rem;
         line-height: 1.4;
         color: var(--text-secondary-color);
+    }
+
+
+    &:focus-visible {
+        outline: 0px;
+        box-shadow: 0 0 0 6px var(--focus-border-shadow, rgba(144, 202, 249, 0.10));
+        transition: outline-color 0.3s, box-shadow 0.3s;
+    }
+
+    &.card-theme-blue {
+        --focus-border-color: #90caf9;
+        --focus-border-shadow: rgba(144, 202, 249, 0.50);
+    }
+    &.card-theme-green {
+        --focus-border-color: #a5d6a7;
+        --focus-border-shadow: rgba(165, 214, 167, 0.5);
+    }
+    &.card-theme-orange {
+        --focus-border-color: #ffe0b2;
+        --focus-border-shadow: rgba(255, 224, 178, 0.50);
     }
 }

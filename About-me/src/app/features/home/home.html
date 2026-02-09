@@ -1,6 +1,6 @@
 <div id="cards">
     @for (card of cards; track $index) {
-        <div class="card" (mousemove)="onCardMove($event)">
+        <div class="card card-theme-{{card.theme}}" (mousemove)="onCardMove($event)" [routerLink]="card.route" [tabIndex]="$index+1" role="link" (keydown)="onKeydown($event)">
             <div class="card-content">
                 <img class="card-image" [ngSrc]="card.imageSrc" [width]="card.imageWidth" [height]="card.imageHeight" [attr.alt]="card.imageAlt" />
                 <div class="card-body">
@@ -12,3 +12,4 @@
         </div>
     }
 </div>
+<router-outlet></router-outlet>
