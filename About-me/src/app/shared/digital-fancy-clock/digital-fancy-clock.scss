@@ -1,39 +1,39 @@
-$clock-size: 1rem;
-
-.clock-grids {
+.content {
     display: flex;
-    gap: 0px;
+    flex-direction: column;
+    align-items: center;
 }
 
-.clock-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 0px;
-    align-items: start;
+.router-fade {
+    width: 100%;
+    min-height: 100px;
 }
 
-.extra-space {
-    margin-right: $clock-size;
+.fade-in {
+    opacity: 0;
+    animation: fadeInRouter 0.8s ease forwards;
 }
 
- .clock {
-    height: $clock-size;
-    width: $clock-size;
-    background-color: oklch(20% 0 0);
-    border: 0.25rem solid oklch(30% 0 0);   
-    position: relative;
-    overflow: hidden;
+$max-sub-content: 20;
+$delay-step: 0.3s;
+.sub-content.fade-in {
+    animation-delay: 0s;
+}
+@for $i from 2 through $max-sub-content {
+    .sub-content.fade-in:nth-child(#{$i}) {
+        animation-delay: ($i - 1) * $delay-step;
+    }
 }
 
-.hand {
-    height: 0.1875rem;
-    background-color: oklch(0.9475 0.1916 119.15);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: 0% -50%;
-    width: 50%;
-    transform-origin: left center;
-    transition: rotate 250ms;
+.sub-content.fade-in {
+    animation-delay: 0s;
+}
+
+@keyframes fadeInRouter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

@@ -3,3 +3,37 @@
     flex-direction: column;
     align-items: center;
 }
+
+.router-fade {
+    width: 100%;
+    min-height: 100px;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInRouter 0.8s ease forwards;
+}
+
+$max-sub-content: 20;
+$delay-step: 0.3s;
+.sub-content.fade-in {
+    animation-delay: 0s;
+}
+@for $i from 2 through $max-sub-content {
+    .sub-content.fade-in:nth-child(#{$i}) {
+        animation-delay: ($i - 1) * $delay-step;
+    }
+}
+
+.sub-content.fade-in {
+    animation-delay: 0s;
+}
+
+@keyframes fadeInRouter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
