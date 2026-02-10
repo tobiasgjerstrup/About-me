@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "test:e2e": "playwright test",
+    "test:e2e": "playwright test && playwright show-report",
     "test:e2e:serve": "ng serve --port 4201 --configuration e2e",
     "serve:ssr:About-me": "node dist/About-me/server/server.mjs",
     "format": "prettier --write ."
